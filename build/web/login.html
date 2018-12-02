@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<style>
+form {
+    border: 3px solid black;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: skyblue;
+    color:blue;
+    padding: 14px 20px;
+    margin: 8px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color:red;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+    background-image:url(img79.jpg); {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+@media screen and (max-width: 300px) {
+    span.psw {
+       display
+    .cancelbtn {
+       width: 100%;
+    }
+}
+</style>
+<script type="text/javascript">
+function verify(){
+var pass=document.getElementById("password").value;
+var lol=pass.length;
+if((pass=="" && pass.search("@"))==-1){
+alert("password empty");
+}
+else
+{
+alert("@ required");}
+}
+</script>
+<body>
+    <form action="SignIn" method="POST">
+<h2>Login Form</h2>
+  <div class="container">
+    <label><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="name" required>
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="pwd" required>
+        
+    <button type="submit">Login</button>
+    <button type="submit">signup</button>
+    <input type="checkbox" checked="checked"> Remember me
+  </div>
+
+  <div class="container" style="background-color:yellow">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href=>password?</a></span>
+    </div>
+</form>
+</body>
+</html>

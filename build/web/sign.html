@@ -1,0 +1,87 @@
+
+
+<!DOCTYPE html>
+<html>
+<style>
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px;
+    display: inline-block;
+    border: 1px solid lightgrey;
+    box-sizing: border-box;
+}
+button {
+    background-color:skyblue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+.cancelbtn {
+    padding: 14px 20px;
+    background-color:powderblue;
+}
+.cancelbtn,.signupbtn {
+    float:center;
+    width: 50%;
+}
+.container {
+    padding: 16px;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
+</style>
+<script type="text/javascript">
+function verify(){
+var pass=document.getElementById("password").value;
+var lol=pass.length;
+if((pass=="" && pass.search("@"))==-1){
+alert("password empty");
+}
+else
+{
+alert("@ required");}
+}
+</script>
+<body>
+
+<h2>Signup Form</h2>
+
+<form action="SignUp" method="POST" style="border:1px solid ">
+  <div class="container">
+<label><b>First Name</b></label>
+<input type="text" placeholder="name" name="fname">
+<label><b>Last Name</b></label>
+<input type="text" placeholder="name" name="lname">
+<label><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+<label><b>Gender</b></label>
+<input type="radio" name="gender" value="male">male<br>
+<input type="radio" name="gender" value="female">female <br>
+<label><b>Password</b></label>
+<input type="password" placeholder="Enter Password" name="psw" required>
+<label><b>Repeat Password</b></label>
+<input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+<input type="checkbox" checked="checked"> Remember me
+<p>By creating an account you agree to our <a href=>Terms & Privacy</a>.</p>
+<div class="clearfix">
+<button type="button" class="cancelbtn">Cancel</button>
+<button type="submit" class="signupbtn">Sign Up</button>
+    </div>
+  </div>
+</form>
+
+</body>
+</html>
